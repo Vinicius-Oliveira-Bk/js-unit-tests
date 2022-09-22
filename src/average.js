@@ -12,23 +12,17 @@
 */
 
 const average = (myArray) => {
-  let averageSum = 0;
-  for (let index = 0; index < myArray.length; index += 1) {
-    if (typeof myArray === 'number') {
-      averageSum += (myArray[index]) / myArray.length;
-    } else if (typeof myArray !== 'number') {
-      return undefined;
-    } else if (myArray.length === 0) {
-      return undefined;
-    }
+  let sum = 0;
+  if (myArray.length === 0) {
+    return undefined;
   }
-  return Math.round(averageSum);
+  for (let index = 0; index < myArray.length; index += 1) {
+    if (typeof myArray[index] !== 'number') {
+      return undefined;
+    } sum += myArray[index];
+  } return Math.round(sum / myArray.length);
 };
 
-/* console.log(average([2, 2])); */
+console.log(average([2, '2']));
 
 module.exports = average;
-
-/* averageSum = undefined;
-else if (myArray.length === 0) {
-  averageSum = undefined; */
