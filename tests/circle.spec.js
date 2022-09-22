@@ -25,7 +25,7 @@ const catArea = () => circle.area = {area: 28.26};
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contendo os valores esperados', () => {
-    fail('Teste vazio!');
+    /* fail('Teste vazio!'); */
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
     expect(circle('onze')).toBeUndefined();
@@ -40,6 +40,6 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste se dentro do objeto retornado, a função retorna uma `key` com `value` igual à área correta para um círculo de raio 3.
     expect(catArea(2)).toMatchObject({area: 28.26});
     // Teste se a função retorna, em um objeto, os dados corretos de um círculo de raio 3.
-
+    expect(circle(3)).toMatchObject({ radius: 3, area: 28.259999999999998, circumference: 18.84 })
   });
 });

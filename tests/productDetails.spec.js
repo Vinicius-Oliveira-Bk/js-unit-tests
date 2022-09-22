@@ -44,6 +44,6 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
     expect(Array.isArray(productDetails('Alcool gel', 'Máscara'))).toBe('Alcool gel' !== 'Máscara')
     // Teste se os dois productIds terminam com 123.
-    expect(Array.isArray(productDetails.productId('Alcool gel', 'Máscara'))).toMatch('123')
+    expect(Object.values(productDetails)).toContain('123')
   });
 });
