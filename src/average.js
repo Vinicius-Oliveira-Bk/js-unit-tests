@@ -23,6 +23,4 @@ const average = (myArray) => {
   } return Math.round(sum / myArray.length);
 };
 
-console.log(average([2, '2']));
-
 module.exports = average;
